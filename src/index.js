@@ -1,17 +1,26 @@
+/* file is entry  point to react */
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+
+/* 
+root is the id name of the div from index.html
+.createRoot() takes in a container & returns the root
+.createRoot() controls contents of the container node passed in
+root div wraps around the entire UI
+*/
+
+const root = ReactDOM.createRoot(document.getElementById('root')); 
+// we're grabbing div from index.html & inserting app into that div
 root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
 );
+/// app is root component
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
