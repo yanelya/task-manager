@@ -31,7 +31,7 @@ It is not necessary to add a semicolon in JavaScript. JavaScript engine automati
 
 tasks={tasks} taking tasks and passing task as prop into component
 
-WHen returning, we must only return a single element, is why we wrap our html in a div, to return that element
+When returning, we must only return a single element, is why we wrap our html in a div, to return that element
 
 */
 
