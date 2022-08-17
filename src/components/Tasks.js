@@ -1,5 +1,5 @@
-import Task from './Task'
 import React from 'react'
+import { FaTimes } from 'react-icons/fa' 
 
 /*
 
@@ -13,13 +13,20 @@ taking task in as prop
 
 */
 
-const Tasks = ({tasksprop, onDelete}) => {
+const Tasks = ({tasks, onDelete}) => {
   return (
     <>
-        {tasksprop.map(
-          (aTaskarg) => (
-            <Task key={aTaskarg.id} task={aTaskarg}
-            onDelete={onDelete} />
+        {tasks.map(
+          (aTaskarg, index) => (
+             <div className='task' key={index}> 
+                <h3>{aTaskarg.text}{' '} 
+                <FaTimes 
+                  style={{color: 'red'}} 
+                  onClick={() => onDelete(aTaskarg.id)} 
+                /> 
+                </h3>
+                <p>{aTaskarg.day}</p>
+             </div>
         ))}
     </>
   )
